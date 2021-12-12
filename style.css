@@ -1,0 +1,147 @@
+:root {
+  --main-color: rgb(4, 0, 255);
+  --secondary-color: rgb(20, 18, 112);
+  --transition-one-tenth: 0.1s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#home {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+      to bottom,
+      rgba(2, 2, 2, 0.1),
+      rgba(255, 255, 255, 0.04)
+    ),
+    url(/images/animated-landscape-2560x1440-wallpaper.png) no-repeat fixed
+      center;
+}
+
+/* ---------- Navbar ---------- */
+
+#navbar {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  padding: 1em;
+}
+
+#nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav-logo a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#nav-links li {
+  font-weight: bold;
+  list-style: none;
+}
+#nav-links li a {
+  padding: 0.5em;
+  color: inherit;
+  text-decoration: inherit;
+  transition: 0.1s ease-in-out;
+}
+#nav-links li a:hover {
+  transition: 0.1s ease-in-out;
+  color: var(--secondary-color);
+}
+
+#nav-contact {
+  color: black;
+  font-weight: bold;
+  padding: 1em 3em;
+  border-radius: 2.5em;
+  width: fit-content;
+  margin: auto;
+  transition: var(--transition-one-tenth);
+  background-color: rgba(240, 248, 255, 0.8);
+  border: none;
+  outline: none;
+}
+#nav-contact:hover {
+  cursor: pointer;
+  transition: var(--transition-one-tenth);
+  background-color: rgba(240, 248, 255, 0.6);
+}
+
+#nav-contact a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* ---------- Hook ---------- */
+
+#hook_container {
+  position: absolute;
+  top: 20%;
+  left: 9%;
+  max-width: 30%;
+  padding: 1em;
+}
+
+#hook {
+  /* must change depending on screen */
+  font-size: 4em;
+  padding-bottom: 1em;
+}
+
+#hook_description {
+  text-shadow: 2px 2px black;
+  padding-bottom: 2.5em;
+}
+
+#hook_options {
+  width: 50%;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hook-buttons {
+  font-weight: bold;
+  padding: 1em 0;
+  border-radius: 2.5em;
+  color: black;
+  width: 10em;
+  border: none;
+  outline: none;
+}
+
+#learn_more {
+  background-color: var(--main-color);
+  color: white;
+  transition: var(--transition-one-tenth);
+}
+#learn_more:hover {
+  background-color: rgba(4, 0, 255, 0.856);
+  cursor: pointer;
+  transition: var(--transition-one-tenth);
+}
+
+#book_trip {
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition-one-tenth);
+}
+#book_trip:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: var(--transition-one-tenth);
+}
