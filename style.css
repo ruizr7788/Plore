@@ -1,7 +1,9 @@
 :root {
   --main-color: rgb(4, 0, 255);
   --secondary-color: rgb(20, 18, 112);
+  --second-white: rgb(220, 220, 220);
   --transition-one-tenth: 0.1s ease-in-out;
+  --transition-one-second: 1s ease-in-out;
 }
 
 * {
@@ -20,8 +22,7 @@
       rgba(2, 2, 2, 0.1),
       rgba(255, 255, 255, 0.04)
     ),
-    url(/images/animated-landscape-2560x1440-wallpaper.png) no-repeat fixed
-      center;
+    url(/images/home2.jpg) no-repeat fixed center;
 }
 
 /* ---------- Navbar ---------- */
@@ -61,7 +62,7 @@
 }
 #nav-links li a:hover {
   transition: 0.1s ease-in-out;
-  color: var(--secondary-color);
+  color: var(--second-white);
 }
 
 #nav-contact {
@@ -159,15 +160,16 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 5em;
+  transition: var(--transition-one-second);
 }
 #services .card {
   width: 25em;
   height: 30em;
   padding: 2em;
   text-align: justify;
-  border-radius: 1em;
   box-sizing: border-box;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.089);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 #services .card .img {
   width: 10em;
@@ -199,4 +201,10 @@
 #services .card .img-camping {
   background: url(/images/camping-clipart.jpg) no-repeat center;
   background-size: cover;
+}
+
+/* ---------- collective styling--------- */
+
+.section_translate-left {
+  transform: translateX(-1200px);
 }
