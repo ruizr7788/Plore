@@ -1,7 +1,9 @@
 :root {
-  --main-color: rgb(4, 0, 255);
-  --secondary-color: rgb(20, 18, 112);
-  --second-white: rgb(220, 220, 220);
+  --hook-color: #6c5ce7;
+  --secondary-hook-color: #a29bfe;
+  --main-color: white;
+  --secondary-color: rgb(220, 220, 220);
+
   --transition-one-tenth: 0.1s ease-in-out;
   --transition-one-second: 1s ease-in-out;
 }
@@ -9,8 +11,6 @@
 * {
   margin: 0;
   padding: 0;
-  color: white;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 #home {
@@ -40,7 +40,7 @@
   align-items: center;
 }
 #nav-logo a {
-  color: inherit;
+  color: var(--main-color);
   text-decoration: inherit;
 }
 
@@ -56,13 +56,13 @@
 }
 #nav-links li a {
   padding: 0.5em;
-  color: inherit;
+  color: var(--main-color);
   text-decoration: inherit;
   transition: 0.1s ease-in-out;
 }
 #nav-links li a:hover {
   transition: 0.1s ease-in-out;
-  color: var(--second-white);
+  color: var(--secondary-color);
 }
 
 #nav-contact {
@@ -100,12 +100,14 @@
 
 #hook {
   /* must change depending on screen */
+  color: var(--main-color);
   font-size: 4em;
   padding-bottom: 1em;
 }
 
 #hook_description {
-  text-shadow: 2px 2px black;
+  color: var(--main-color);
+  text-shadow: 0.5px 0.5px var(--main-color);
   padding-bottom: 2.5em;
 }
 
@@ -127,12 +129,12 @@
 }
 
 #learn_more {
-  background-color: var(--main-color);
+  background-color: var(--hook-color);
   color: white;
   transition: var(--transition-one-tenth);
 }
 #learn_more:hover {
-  background-color: rgba(4, 0, 255, 0.856);
+  background-color: var(--secondary-hook-color);
   cursor: pointer;
   transition: var(--transition-one-tenth);
 }
@@ -178,7 +180,7 @@
   border-radius: 50%;
 }
 #services .card h2 {
-  color: black;
+  color: inherit;
   padding: 1em 0;
 }
 #services .card p {
@@ -191,19 +193,72 @@
 
 /* ---------- Service card images ---------- */
 #services .card .img-hiking {
-  background: url(/images/hiking-clipart.png) no-repeat center;
+  background: url(/images/camping-clipart) no-repeat center;
   background-size: cover;
 }
 #services .card .img-trails {
-  background: url(/images/trails-clipart.gif) no-repeat center;
+  background: url(/images/trails-clipart) no-repeat center;
   background-size: cover;
 }
 #services .card .img-camping {
-  background: url(/images/camping-clipart.jpg) no-repeat center;
+  background: url(/images/camping-clipart) no-repeat center;
   background-size: cover;
 }
 
-/* ---------- collective styling--------- */
+/* ---------- Weather bar ---------- */
+
+#activity_suggestions_container {
+  height: 20vh;
+}
+
+.weekday {
+  border-bottom: 1px solid var(--secondary-hook-color);
+}
+
+.weather-strip {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* margin: auto; */
+}
+
+.weathercard {
+  border-bottom: 1px solid var(--hook-color);
+  width: 11%;
+  font-family: inherit;
+  color: #333;
+}
+
+.weather-info {
+  padding: 1em 0 1.5em 1em;
+}
+
+.weather-range {
+  font-size: small;
+}
+
+.activity-suggestion {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.activity-suggestion h2 {
+  font-size: large;
+  padding-bottom: 0.5em;
+}
+
+.activity-suggestion ol {
+  list-style: none;
+  line-height: 1.5;
+}
+
+.activity-suggestion ol a {
+  color: #333;
+  /* color: var(--blue-link); */
+  text-decoration: none;
+}
+
+/* ---------- collective styling --------- */
 
 .section_translate-left {
   transform: translateX(-1200px);
