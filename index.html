@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
     <title>Zeno</title>
   </head>
   <body>
@@ -32,9 +33,6 @@
         <p id="hook_description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
           eveniet deserunt iusto consequatur pariatur, rerum, facere maiores et
-          quo, dolor incidunt molestiae ut. Illum eveniet cupiditate distinctio,
-          aut quam quod blanditiis ea cum voluptatem quisquam saepe deserunt
-          ipsum, nesciunt ratione?
         </p>
         <div id="hook_options">
           <button id="learn_more" class="hook-buttons">Learn more</button>
@@ -74,7 +72,7 @@
         </div>
       </div>
     </div>
-    <div id="activity_suggestions_container">
+    <div id="weather_container">
       <!-- only show in a case of severe weather conditions -->
       <!-- <span id="emergency_weather-news">Emergency weather broadcast</span> -->
 
@@ -84,12 +82,18 @@
         <div class="weathercard">
           <h2 id="Sunday" class="weekday">Sunday</h2>
           <div class="weather-info">
-            <h3>16&deg;</h3>
-            <span id="cloudy"><i class="fas fa-cloud"></i>&nbsp;Cloudy</span>
+            <h3 id="sunday_deg">0&deg;</h3>
+            <!-- image and main description -->
+            <div class="img_des">
+              <img id="sun_img" src="" alt="">
+              <p id="sun_des">Sunny</p>
+            </div>
+
             <p class="weather-range">
-              <span id="highest_temp">H: 25</span
-              ><span id="lowest_temp">L: 12</span>
+              <span id="sun_high_temp">H: 25</span
+              >&nbsp;&nbsp;<span id="sun_low_temp">L: 12</span>
             </p>
+            <p class="air-quality"></p>
           </div>
         </div>
 
@@ -97,11 +101,16 @@
         <div class="weathercard">
           <h2 id="Monday" class="weekday">Monday</h2>
           <div class="weather-info">
-            <h3>16&deg;</h3>
-            <span id="cloudy"><i class="fas fa-cloud"></i>&nbsp;Cloudy</span>
+            <h3 id="monday_deg">0&deg;</h3>
+            <!-- image and main description -->
+            <div class="img_des">
+              <img id="mon_img" src="" alt="">
+              <p id="mon_des">Sunny</p>
+            </div>
+           
             <p class="weather-range">
-              <span id="highest_temp">H: 25</span
-              ><span id="lowest_temp">L: 12</span>
+              <span id="mon_high_temp">H: 25</span
+              >&nbsp;&nbsp;<span id="mon_low_temp">L: 12</span>
             </p>
           </div>
         </div>
@@ -110,11 +119,16 @@
         <div class="weathercard">
           <h2 id="Tuesday" class="weekday">Tuesday</h2>
           <div class="weather-info">
-            <h3>16&deg;</h3>
-            <span id="cloudy"><i class="fas fa-cloud"></i>&nbsp;Cloudy</span>
+            <h3 id="tuesday_deg">0&deg;</h3>
+            <!-- image and main description -->
+            <div class="img_des">
+              <img id="tue_img" src="" alt="">
+              <p id="tue_des">Sunny</p>
+            </div>
+      
             <p class="weather-range">
-              <span id="highest_temp">H: 25</span
-              ><span id="lowest_temp">L: 12</span>
+              <span id="tue_high_temp">H: 25</span
+              >&nbsp;&nbsp;<span id="tue_low_temp"">L: 12</span>
             </p>
           </div>
         </div>
@@ -123,11 +137,16 @@
         <div class="weathercard">
           <h2 id="Wednesday" class="weekday">Wednesday</h2>
           <div class="weather-info">
-            <h3>16&deg;</h3>
-            <span id="cloudy"><i class="fas fa-cloud"></i>&nbsp;Cloudy</span>
+            <h3 id="wednesday_deg">0&deg;</h3>
+            <!-- image and main description -->
+            <div class="img_des">
+              <img id="wed_img" src="" alt="">
+              <p id="wed_des">Sunny</p>
+            </div>
+         
             <p class="weather-range">
-              <span id="highest_temp">H: 25</span
-              ><span id="lowest_temp">L: 12</span>
+              <span id="wed_high_temp">H: 25</span
+              >&nbsp;&nbsp;<span id="wed_low_temp">L: 12</span>
             </p>
           </div>
         </div>
@@ -136,11 +155,16 @@
         <div class="weathercard">
           <h2 id="Thursday" class="weekday">Thursday</h2>
           <div class="weather-info">
-            <h3>16&deg;</h3>
-            <span id="cloudy"><i class="fas fa-cloud"></i>&nbsp;Cloudy</span>
+            <h3 id="thursday_deg">0&deg;</h3>
+            <!-- image and main description -->
+            <div class="img_des">
+              <img id="thu_img" src="" alt="">
+              <p id="thu_des">Sunny</p>
+            </div>
+       
             <p class="weather-range">
-              <span id="highest_temp">H: 25</span
-              ><span id="lowest_temp">L: 12</span>
+              <span id="thu_high_temp">H: 25</span
+              >&nbsp;&nbsp;<span id="thu_low_temp">L: 12</span>
             </p>
           </div>
         </div>
@@ -149,11 +173,16 @@
         <div class="weathercard">
           <h2 id="Friday" class="weekday">Friday</h2>
           <div class="weather-info">
-            <h3>16&deg;</h3>
-            <span id="cloudy"><i class="fas fa-cloud"></i>&nbsp;Cloudy</span>
+            <h3 id="friday_deg">0&deg;</h3>
+            <!-- image and main description -->
+            <div class="img_des">
+              <img id="fri_img" src="" alt="">
+              <p id="fri_des">Sunny</p>
+            </div>
+        
             <p class="weather-range">
-              <span id="highest_temp">H: 25</span
-              ><span id="lowest_temp">L: 12</span>
+              <span id="fri_high_temp">H: 25</span
+              >&nbsp;&nbsp;<span id="fri_low_temp">L: 12</span>
             </p>
           </div>
         </div>
@@ -162,16 +191,20 @@
         <div class="weathercard">
           <h2 id="Saturday" class="weekday">Saturday</h2>
           <div class="weather-info">
-            <h3>16&deg;</h3>
-            <span id="cloudy"><i class="fas fa-cloud"></i>&nbsp;Cloudy</span>
+            <h3 id="saturday_deg">0&deg;</h3>
+            <!-- image and main description -->
+            <div class="img_des">
+              <img id="sat_img" src="" alt="">
+              <p id="sat_des">Sunny</p>
+            </div>
+        
             <p class="weather-range">
-              <span id="highest_temp">H: 25</span
-              ><span id="lowest_temp">L: 12</span>
+              <span id="sat_high_temp">H: 25</span> &nbsp;&nbsp;
+              <span id="sat_low_temp">L: 12</span>
             </p>
           </div>
         </div>
       </div>
     </div>
-    <script src="/script.js"></script>
   </body>
 </html>

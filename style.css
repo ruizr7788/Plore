@@ -1,9 +1,10 @@
 :root {
-  --hook-color: #6c5ce7;
-  --secondary-hook-color: #a29bfe;
+  --hook-color: #1abc9c;
+  --secondary-hook-color: #2ecc71;
   --main-color: white;
   --secondary-color: rgb(220, 220, 220);
-
+  --dark-text-color: #2c3e50;
+  --highlighted-dark-text-color: #34495e;
   --transition-one-tenth: 0.1s ease-in-out;
   --transition-one-second: 1s ease-in-out;
 }
@@ -17,12 +18,8 @@
   box-sizing: border-box;
   position: relative;
   height: 94vh;
-  background: linear-gradient(
-      to bottom,
-      rgba(2, 2, 2, 0.1),
-      rgba(255, 255, 255, 0.04)
-    ),
-    url(/images/home2.jpg) no-repeat fixed center;
+  background: linear-gradient(to top, rgba(2, 2, 2, 0.1), rgba(0, 0, 0, 0.3)),
+    url(/images/BG-1.jpg) no-repeat fixed center;
 }
 
 /* ---------- Navbar ---------- */
@@ -42,6 +39,7 @@
 #nav-logo a {
   color: var(--main-color);
   text-decoration: inherit;
+  font-size: x-large;
 }
 
 #nav-links {
@@ -53,6 +51,7 @@
 #nav-links li {
   font-weight: bold;
   list-style: none;
+  font-size: large;
 }
 #nav-links li a {
   padding: 0.5em;
@@ -66,21 +65,21 @@
 }
 
 #nav-contact {
-  color: black;
+  color: var(--main-color);
   font-weight: bold;
   padding: 1em 3em;
   border-radius: 2.5em;
   width: fit-content;
   margin: auto;
   transition: var(--transition-one-tenth);
-  background-color: rgba(240, 248, 255, 0.8);
+  background-color: var(--hook-color);
   border: none;
   outline: none;
 }
 #nav-contact:hover {
   cursor: pointer;
   transition: var(--transition-one-tenth);
-  background-color: rgba(240, 248, 255, 0.6);
+  background-color: var(--secondary-hook-color);
 }
 
 #nav-contact a {
@@ -109,6 +108,8 @@
   color: var(--main-color);
   text-shadow: 0.5px 0.5px var(--main-color);
   padding-bottom: 2.5em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 #hook_options {
@@ -170,8 +171,9 @@
   padding: 2em;
   text-align: justify;
   box-sizing: border-box;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid var(--secondary-hook-color);
+  border-bottom: 1px solid var(--secondary-hook-color);
+  color: var(--dark-text-color);
 }
 #services .card .img {
   width: 10em;
@@ -182,6 +184,7 @@
 #services .card h2 {
   color: inherit;
   padding: 1em 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #services .card p {
   font-size: 17px;
@@ -207,26 +210,47 @@
 
 /* ---------- Weather bar ---------- */
 
-#activity_suggestions_container {
+#weather_container {
+  /* set opacity to 1 once we recieve weather data */
+  opacity: 0;
   height: 20vh;
+  box-sizing: border-box;
+  transition: var(--transition-one-second);
+}
+
+.img_des {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.weathercard .img_des img {
+  width: 50px;
+}
+
+.weathercard .img_des p {
+  font-size: small;
+  font-weight: bold;
 }
 
 .weekday {
-  border-bottom: 1px solid var(--secondary-hook-color);
+  border-bottom: 2px solid var(--hook-color);
 }
 
 .weather-strip {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* margin: auto; */
 }
 
 .weathercard {
-  border-bottom: 1px solid var(--hook-color);
+  border-bottom: 2px solid var(--hook-color);
   width: 11%;
-  font-family: inherit;
-  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--dark-text-color);
+}
+
+.weathercard h2 {
+  font-size: large;
 }
 
 .weather-info {
@@ -234,28 +258,7 @@
 }
 
 .weather-range {
-  font-size: small;
-}
-
-.activity-suggestion {
-  text-align: center;
-  padding-bottom: 2em;
-}
-
-.activity-suggestion h2 {
-  font-size: large;
-  padding-bottom: 0.5em;
-}
-
-.activity-suggestion ol {
-  list-style: none;
-  line-height: 1.5;
-}
-
-.activity-suggestion ol a {
-  color: #333;
-  /* color: var(--blue-link); */
-  text-decoration: none;
+  font-size: 14px;
 }
 
 /* ---------- collective styling --------- */
