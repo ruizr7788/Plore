@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/style.css" />
-    <script src="/script.js" defer></script>
+    <script src="/controller.js" defer></script>
     <title>Zeno</title>
   </head>
   <body cz-shortcut-listen="true">
@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <div id="section-1" class="section section--service">
+    <div id="section-1" class="section section--service hidden">
       <h1 class="section--header">Explore our Options</h1>
       <div id="section__container" class="">
         <div id="service__section">
@@ -81,13 +81,21 @@
         <div id="weather__section">
           <h1>Weather</h1>
 
-          <div id="weather_search_container">
+          <form id="weather_search_container" class="form form--weather-search">
             <input
               id="weather_search"
               type="text"
               placeholder="Enter zip or city"
             />
-          </div>
+          </form>
+
+          <!-- <p class="location-label">Showing results for Quincy, Washington</p> -->
+
+          <!-- <div class="spinner"></div> -->
+
+          <!-- <div id="error__message_search">
+            <p>No search found</p>
+          </div> -->
 
           <div class="weather-strip">
             <!-- ------------ weathercard ---------- -->
