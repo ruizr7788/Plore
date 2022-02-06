@@ -1,4 +1,4 @@
-import "regenerator-runtime/runtime";
+import { async } from "regenerator-runtime/runtime";
 
 export const state = {
   // inside weather store all informatino we need to display
@@ -46,25 +46,25 @@ export const setState = async function (query) {
       const date = new Date(day.date);
       const weekday = date.getDate();
       switch (weekday) {
-        case 5:
+        case 6:
           day.weekday = "Sunday";
           break;
-        case 6:
+        case 0:
           day.weekday = "Monday";
           break;
-        case 0:
+        case 1:
           day.weekday = "Tuesday";
           break;
-        case 1:
+        case 2:
           day.weekday = "Wednesday";
           break;
-        case 2:
+        case 3:
           day.weekday = "Thursday";
           break;
-        case 3:
+        case 4:
           day.weekday = "Friday";
           break;
-        case 4:
+        case 5:
           day.weekday = "Saturday";
           break;
       }

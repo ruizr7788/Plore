@@ -1,0 +1,434 @@
+:root {
+  --hook-color: #1abc9c;
+  --secondary-hook-color: #35aa66;
+  --main-color: white;
+  --secondary-color: rgb(220, 220, 220);
+  --dark-text-color: #2c3e50;
+  --highlighted-dark-text-color: #34495e;
+  --transition-one-tenth: all 0.5s ease;
+  --transition-one-second: all 1s ease-in-out;
+  --transition-two-second: all 2s ease-in-out;
+}
+
+@font-face {
+  font-family: heebo;
+  src: url("heebo.e1493b72.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: heebo, Arial, Helvetica, sans-serif;
+}
+
+#home {
+  box-sizing: border-box;
+  position: relative;
+  height: 94vh;
+  background: linear-gradient(to top, rgba(2, 2, 2, 0.1), rgba(0, 0, 0, 0.3)),
+    url("BG-1.81ded8bf.jpg") no-repeat fixed center;
+  overflow-y: hidden;
+}
+
+/* ---------- Navbar ---------- */
+
+#navbar {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  min-height: 3em;
+}
+
+#nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav-logo a {
+  color: var(--main-color);
+  text-decoration: inherit;
+  font-size: x-large;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#nav-links li {
+  font-weight: bold;
+  font-size: small;
+  list-style: none;
+}
+
+#nav-links li a {
+  padding: 0.5em;
+  color: var(--main-color);
+  text-decoration: inherit;
+  transition: 0.1s ease-in-out;
+}
+
+#nav-links li a:hover {
+  transition: 0.1s ease-in-out;
+  color: var(--secondary-color);
+}
+
+#nav-contact {
+  color: var(--main-color);
+  font-weight: bold;
+  padding: 5px 30px;
+  border-radius: 2.5em;
+  width: fit-content;
+  margin: auto;
+  transition: var(--transition-one-tenth);
+  background-color: var(--hook-color);
+  border: none;
+  outline: none;
+}
+
+#nav-contact:hover {
+  cursor: pointer;
+  transition: var(--transition-one-tenth);
+  background-color: var(--secondary-hook-color);
+}
+
+#nav-contact a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* ---------- Hook ---------- */
+
+#hook_container {
+  position: absolute;
+  top: 30%;
+  left: 9%;
+  max-width: 30%;
+  padding: 1em;
+  text-align: center;
+}
+
+#hook {
+  /* must change depending on screen */
+  color: var(--main-color);
+  font-size: 4em;
+  padding-bottom: 1em;
+}
+
+#hook_description {
+  color: var(--main-color);
+  text-shadow: 0.5px 0.5px var(--main-color);
+  padding-bottom: 2.5em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#hook_options {
+  width: 50%;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.hook-buttons {
+  font-weight: bold;
+  padding: 1em 0;
+  border-radius: 2.5em;
+  color: black;
+  width: 10em;
+  border: none;
+  outline: none;
+}
+
+#learn_more {
+  background-color: var(--hook-color);
+  color: white;
+  transition: var(--transition-one-tenth);
+}
+
+#learn_more:hover {
+  background-color: var(--secondary-hook-color);
+  cursor: pointer;
+  transition: var(--transition-one-tenth);
+}
+
+#book_trip {
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition-one-tenth);
+}
+
+#book_trip:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: var(--transition-one-tenth);
+}
+
+/* ---------- service__section ---------- */
+
+#section-1 {
+  max-height: 100vh;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 5em;
+  transition: var(--transition-one-second);
+}
+
+#section__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#service__section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2em;
+  row-gap: 2.5em;
+  box-sizing: border-box;
+  padding: 3em;
+}
+
+#service__section .card {
+  box-sizing: border-box;
+  position: relative;
+  width: 550px;
+  height: 310px;
+  border-radius: 1em;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(0, 150, 136);
+  border-image: initial;
+}
+
+#service__section .card h2 {
+  position: absolute;
+  top: -1em;
+  left: 0.8em;
+  width: fit-content;
+  height: fit-content;
+  font-weight: normal;
+  background: white;
+  padding: 0px 20px;
+  border-radius: 0.5em;
+  border-bottom: 2px solid rgb(0, 150, 136);
+}
+
+#service__section .card p {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-weight: bold;
+  bottom: 1em;
+  left: 2em;
+  font-size: 14px;
+  padding: 0px 2em 0px 0px;
+}
+
+#service__section .btn--card {
+  box-sizing: border-box;
+  width: 550px;
+  height: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#service__section .button--get-started {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(0, 150, 136);
+  border-image: initial;
+  padding: 1em 5em;
+  border-radius: 2em;
+  transition: all 1s ease 0s;
+}
+
+#service__section .button--get-started:hover {
+  cursor: pointer;
+  background-color: #009688;
+  color: white;
+}
+
+/* ---------- Service card images ---------- */
+
+#service__section .card .img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 0.8em;
+}
+
+#img-hiking {
+  background: linear-gradient(to top, rgba(2, 2, 2, 0.1), rgba(0, 0, 0, 0)),
+    url("hiking.f453c065.jpeg");
+}
+
+#img-trails {
+  background: linear-gradient(to top, rgba(2, 2, 2, 0.3), rgba(0, 0, 0, 0)),
+    url("trails.54626548.jpg");
+}
+
+#img-camping {
+  background: linear-gradient(to top, rgba(2, 2, 2, 0.3), rgba(0, 0, 0, 0)),
+    url("camping.fbdb0c77.jpeg");
+}
+
+/* ---------- Weather bar ---------- */
+
+.location-label {
+  text-align: center;
+  font-size: x-small;
+  color: rgb(99, 96, 96);
+  padding: 0 0 1em 0;
+  margin: 0;
+}
+
+#weather__section {
+  width: 270px;
+  height: fit-content;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(0, 188, 212);
+  border-image: initial;
+  border-radius: 1em;
+  transition: var(--transition-one-second);
+  padding: 0px 0px 2em;
+}
+
+#weather__section h1 {
+  font-weight: normal;
+  font-size: x-large;
+  background-color: white;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 15px;
+  transform: translateY(-0.8em);
+  padding: 0px 5px;
+}
+
+#weather_search_container {
+  text-align: center;
+  padding: 0px 0px 2em;
+  transition: var(--transition-one-second);
+}
+
+#weather_search {
+  padding: 3px 30px;
+  border-radius: 1em;
+  border: 1px solid grey;
+}
+
+.weathercard {
+  color: white;
+  width: 80%;
+  border-radius: 0.5em;
+  position: relative;
+  background-color: #32afc8;
+  padding: 15px;
+  margin: 0 auto 0.7em auto;
+}
+
+.weathercard h2 {
+  font-size: 17px;
+}
+
+.img_des {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: fit-content;
+}
+
+.weathercard .img_des img {
+  width: 40px;
+}
+
+.weathercard .img_des p {
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.weather-range {
+  font-size: 14px;
+  position: absolute;
+  right: 3em;
+  top: 35%;
+  transform: translateY(-35%);
+}
+
+/* error search message */
+
+#error__message_search {
+  text-align: center;
+  color: #333;
+}
+
+/* ---------- collective styling --------- */
+
+/* animation for spinner */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  margin: auto;
+  border: 3px dashed #009688;
+  border-top: white;
+  border-radius: 50%;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.section--header {
+  font-weight: normal;
+  width: fit-content;
+  border-bottom: 3px solid rgb(76, 175, 80);
+}
+
+.section_translate-left {
+  transform: translateX(-1200px);
+}
+
+/* fixed navbar */
+
+.fixed {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(50, 54, 53);
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  transition: var(--transition-one-second);
+}
+
+.fixed #nav-links li {
+  font-size: small;
+  font-weight: normal;
+}
+
+.fixed #nav-contact {
+  font-size: small;
+  padding: 5px 30px;
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */

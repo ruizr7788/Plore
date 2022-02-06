@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="./images/tempIcon.jpg"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -11,7 +17,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/style.css" />
-    <script src="/controller.js" defer></script>
+    <script type="module" src="/controller.js" defer></script>
     <title>Zeno</title>
   </head>
   <body cz-shortcut-listen="true">
@@ -21,15 +27,15 @@
         <nav>
           <ul id="nav-links">
             <li class="nav-link"><a href="#">Our story</a></li>
-            <li class="nav-link"><a href="#">Product</a></li>
-            <li class="nav-link"><a href="#">Buy</a></li>
-            <li class="nav-link"><a href="#">Careers</a></li>
+            <li class="nav-link"><a href="#">Book</a></li>
+            <li class="nav-link"><a href="#">Explore</a></li>
+            <li class="nav-link"><a href="#">Top 10</a></li>
           </ul>
         </nav>
         <button id="nav-contact"><a href="#">Contact</a></button>
       </div>
       <div id="hook_container">
-        <h1 id="hook">Explore Beyond the Edges of Washington</h1>
+        <h1 id="hook">Explore</h1>
         <p id="hook_description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
           eveniet deserunt iusto consequatur pariatur, rerum, facere maiores et
@@ -46,30 +52,27 @@
       <div id="section__container" class="">
         <div id="service__section">
           <div class="card">
-            <div class="img img-hiking"></div>
+            <div id="img-hiking" class="img"></div>
             <h2>Hiking</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-              officia eligendi commodi assumenda similique amet dolor
-              dignissimos maxime delectus aut?
+              officia eligendi
             </p>
           </div>
           <div class="card">
-            <div class="img img-trails"></div>
+            <div id="img-trails" class="img"></div>
             <h2>Trails</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              blanditiis autem a officiis adipisci harum voluptates accusantium
-              soluta delectus quidem.
+              blanditiis autem a
             </p>
           </div>
           <div class="card">
-            <div class="img img-camping"></div>
+            <div id="img-camping" class="img"></div>
             <h2>Camping</h2>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto
-              provident omnis, similique explicabo ipsum dolores nemo architecto
-              magni eveniet vel?
+              provident omnis
             </p>
           </div>
           <div class="btn--card">

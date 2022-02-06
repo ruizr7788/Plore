@@ -1,20 +1,18 @@
 :root {
   --hook-color: #1abc9c;
-  --secondary-hook-color: #2ecc71;
+  --secondary-hook-color: #35aa66;
   --main-color: white;
   --secondary-color: rgb(220, 220, 220);
   --dark-text-color: #2c3e50;
   --highlighted-dark-text-color: #34495e;
-  --transition-one-tenth: all 0.1s ease-in-out;
+  --transition-one-tenth: all 0.5s ease;
   --transition-one-second: all 1s ease-in-out;
   --transition-two-second: all 2s ease-in-out;
 }
 
 @font-face {
   font-family: heebo;
-  src: url(./webfontkit-20220202-194011/heebo-variablefont_wght-webfont.woff);
-  font-family: heebo;
-  src: url(./webfontkit-20220202-194011/heebo-variablefont_wght-webfont.woff2);
+  src: url("./fonts/heebo.woff");
 }
 
 * {
@@ -38,6 +36,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
+  min-height: 3em;
 }
 
 #nav-logo {
@@ -76,7 +75,7 @@
 #nav-contact {
   color: var(--main-color);
   font-weight: bold;
-  padding: 1em 3em;
+  padding: 5px 30px;
   border-radius: 2.5em;
   width: fit-content;
   margin: auto;
@@ -100,10 +99,11 @@
 
 #hook_container {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 9%;
   max-width: 30%;
   padding: 1em;
+  text-align: center;
 }
 
 #hook {
@@ -126,6 +126,7 @@
   padding: 1em 0;
   display: flex;
   justify-content: space-around;
+  margin: auto;
 }
 
 .hook-buttons {
@@ -212,6 +213,7 @@
   position: absolute;
   z-index: 2;
   color: white;
+  font-weight: bold;
   bottom: 1em;
   left: 2em;
   font-size: 14px;
@@ -240,7 +242,8 @@
 
 #service__section .button--get-started:hover {
   cursor: pointer;
-  background-color: #b0e4de;
+  background-color: #009688;
+  color: white;
 }
 
 /* ---------- Service card images ---------- */
@@ -251,14 +254,17 @@
   border-radius: 0.8em;
 }
 
-#service__section .card .img-hiking {
-  background-image: url(/images/hiking);
+#img-hiking {
+  background: linear-gradient(to top, rgba(2, 2, 2, 0.1), rgba(0, 0, 0, 0)),
+    url(/images/hiking.jpeg);
 }
-#service__section .card .img-trails {
-  background-image: url(/images/trails);
+#img-trails {
+  background: linear-gradient(to top, rgba(2, 2, 2, 0.3), rgba(0, 0, 0, 0)),
+    url(/images/trails.jpg);
 }
-#service__section .card .img-camping {
-  background-image: url(/images/camping);
+#img-camping {
+  background: linear-gradient(to top, rgba(2, 2, 2, 0.3), rgba(0, 0, 0, 0)),
+    url(/images/camping.jpeg);
 }
 
 /* ---------- Weather bar ---------- */
@@ -269,7 +275,6 @@
   color: rgb(99, 96, 96);
   padding: 0 0 1em 0;
   margin: 0;
-  transition: var(--transition-one-tenth);
 }
 
 #weather__section {
@@ -303,12 +308,9 @@
 }
 
 #weather_search {
-  padding: 2px 30px;
+  padding: 3px 30px;
   border-radius: 1em;
-  border-width: 1px;
-  border-style: solid;
-  border-color: grey;
-  border-image: initial;
+  border: 1px solid grey;
 }
 
 .weathercard {
@@ -345,8 +347,8 @@
   font-size: 14px;
   position: absolute;
   right: 3em;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 35%;
+  transform: translateY(-35%);
 }
 
 /* error search message */

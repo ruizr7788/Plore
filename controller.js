@@ -1,9 +1,9 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
-import serviceSectionView from "./views/serviceSectionView";
-import navbarView from "./views/navbarView";
-import weatherBarView from "./views/weatherBarView";
+import serviceSectionView from "./Views/serviceSectionView.js";
+import navbarView from "./Views/navbarView.js";
+import weatherBarView from "./Views/weatherBarView.js";
 import * as model from "./model.js";
 
 const sectionController = function (entry, observer) {

@@ -1,29 +1,26 @@
 {
-  "dependencies": {
-    "core-js": "^3.21.0",
-    "parcel": "^2.2.1",
-    "postcss": "^8.4.6",
-    "regenerator-runtime": "^0.13.9"
-  },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.5"
-  },
+  "name": "xplore",
+  "version": "1.0.0",
+  "description": "state wide tourism",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": " parcel build index.html"
   },
-  "name": "plore",
-  "version": "1.0.0",
-  "main": "controller.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ruizr7788/Plore.git"
   },
-  "author": "",
+  "author": "Rafael Ruiz",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ruizr7788/Plore/issues"
   },
   "homepage": "https://github.com/ruizr7788/Plore#readme",
-  "description": ""
+  "devDependencies": {
+    "parcel": "^2.2.1"
+  },
+  "dependencies": {
+    "core-js": "^3.21.0",
+    "regenerator-runtime": "^0.13.9"
+  }
 }
