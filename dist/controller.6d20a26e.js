@@ -15457,8 +15457,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _regeneratorRuntime = require("regenerator-runtime");
-
 var _view = _interopRequireDefault(require("./view.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -15604,458 +15602,7 @@ var WeatherView = /*#__PURE__*/function (_View) {
 var _default = new WeatherView();
 
 exports.default = _default;
-},{"regenerator-runtime":"node_modules/regenerator-runtime/runtime.js","./view.js":"views/view.js"}],"node_modules/cli-spinners/spinners.json":[function(require,module,exports) {
-module.exports = {
-  "dots": {
-    "interval": 80,
-    "frames": ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
-  },
-  "dots2": {
-    "interval": 80,
-    "frames": ["⣾", "⣽", "⣻", "⢿", "⡿", "⣟", "⣯", "⣷"]
-  },
-  "dots3": {
-    "interval": 80,
-    "frames": ["⠋", "⠙", "⠚", "⠞", "⠖", "⠦", "⠴", "⠲", "⠳", "⠓"]
-  },
-  "dots4": {
-    "interval": 80,
-    "frames": ["⠄", "⠆", "⠇", "⠋", "⠙", "⠸", "⠰", "⠠", "⠰", "⠸", "⠙", "⠋", "⠇", "⠆"]
-  },
-  "dots5": {
-    "interval": 80,
-    "frames": ["⠋", "⠙", "⠚", "⠒", "⠂", "⠂", "⠒", "⠲", "⠴", "⠦", "⠖", "⠒", "⠐", "⠐", "⠒", "⠓", "⠋"]
-  },
-  "dots6": {
-    "interval": 80,
-    "frames": ["⠁", "⠉", "⠙", "⠚", "⠒", "⠂", "⠂", "⠒", "⠲", "⠴", "⠤", "⠄", "⠄", "⠤", "⠴", "⠲", "⠒", "⠂", "⠂", "⠒", "⠚", "⠙", "⠉", "⠁"]
-  },
-  "dots7": {
-    "interval": 80,
-    "frames": ["⠈", "⠉", "⠋", "⠓", "⠒", "⠐", "⠐", "⠒", "⠖", "⠦", "⠤", "⠠", "⠠", "⠤", "⠦", "⠖", "⠒", "⠐", "⠐", "⠒", "⠓", "⠋", "⠉", "⠈"]
-  },
-  "dots8": {
-    "interval": 80,
-    "frames": ["⠁", "⠁", "⠉", "⠙", "⠚", "⠒", "⠂", "⠂", "⠒", "⠲", "⠴", "⠤", "⠄", "⠄", "⠤", "⠠", "⠠", "⠤", "⠦", "⠖", "⠒", "⠐", "⠐", "⠒", "⠓", "⠋", "⠉", "⠈", "⠈"]
-  },
-  "dots9": {
-    "interval": 80,
-    "frames": ["⢹", "⢺", "⢼", "⣸", "⣇", "⡧", "⡗", "⡏"]
-  },
-  "dots10": {
-    "interval": 80,
-    "frames": ["⢄", "⢂", "⢁", "⡁", "⡈", "⡐", "⡠"]
-  },
-  "dots11": {
-    "interval": 100,
-    "frames": ["⠁", "⠂", "⠄", "⡀", "⢀", "⠠", "⠐", "⠈"]
-  },
-  "dots12": {
-    "interval": 80,
-    "frames": ["⢀⠀", "⡀⠀", "⠄⠀", "⢂⠀", "⡂⠀", "⠅⠀", "⢃⠀", "⡃⠀", "⠍⠀", "⢋⠀", "⡋⠀", "⠍⠁", "⢋⠁", "⡋⠁", "⠍⠉", "⠋⠉", "⠋⠉", "⠉⠙", "⠉⠙", "⠉⠩", "⠈⢙", "⠈⡙", "⢈⠩", "⡀⢙", "⠄⡙", "⢂⠩", "⡂⢘", "⠅⡘", "⢃⠨", "⡃⢐", "⠍⡐", "⢋⠠", "⡋⢀", "⠍⡁", "⢋⠁", "⡋⠁", "⠍⠉", "⠋⠉", "⠋⠉", "⠉⠙", "⠉⠙", "⠉⠩", "⠈⢙", "⠈⡙", "⠈⠩", "⠀⢙", "⠀⡙", "⠀⠩", "⠀⢘", "⠀⡘", "⠀⠨", "⠀⢐", "⠀⡐", "⠀⠠", "⠀⢀", "⠀⡀"]
-  },
-  "dots8Bit": {
-    "interval": 80,
-    "frames": ["⠀", "⠁", "⠂", "⠃", "⠄", "⠅", "⠆", "⠇", "⡀", "⡁", "⡂", "⡃", "⡄", "⡅", "⡆", "⡇", "⠈", "⠉", "⠊", "⠋", "⠌", "⠍", "⠎", "⠏", "⡈", "⡉", "⡊", "⡋", "⡌", "⡍", "⡎", "⡏", "⠐", "⠑", "⠒", "⠓", "⠔", "⠕", "⠖", "⠗", "⡐", "⡑", "⡒", "⡓", "⡔", "⡕", "⡖", "⡗", "⠘", "⠙", "⠚", "⠛", "⠜", "⠝", "⠞", "⠟", "⡘", "⡙", "⡚", "⡛", "⡜", "⡝", "⡞", "⡟", "⠠", "⠡", "⠢", "⠣", "⠤", "⠥", "⠦", "⠧", "⡠", "⡡", "⡢", "⡣", "⡤", "⡥", "⡦", "⡧", "⠨", "⠩", "⠪", "⠫", "⠬", "⠭", "⠮", "⠯", "⡨", "⡩", "⡪", "⡫", "⡬", "⡭", "⡮", "⡯", "⠰", "⠱", "⠲", "⠳", "⠴", "⠵", "⠶", "⠷", "⡰", "⡱", "⡲", "⡳", "⡴", "⡵", "⡶", "⡷", "⠸", "⠹", "⠺", "⠻", "⠼", "⠽", "⠾", "⠿", "⡸", "⡹", "⡺", "⡻", "⡼", "⡽", "⡾", "⡿", "⢀", "⢁", "⢂", "⢃", "⢄", "⢅", "⢆", "⢇", "⣀", "⣁", "⣂", "⣃", "⣄", "⣅", "⣆", "⣇", "⢈", "⢉", "⢊", "⢋", "⢌", "⢍", "⢎", "⢏", "⣈", "⣉", "⣊", "⣋", "⣌", "⣍", "⣎", "⣏", "⢐", "⢑", "⢒", "⢓", "⢔", "⢕", "⢖", "⢗", "⣐", "⣑", "⣒", "⣓", "⣔", "⣕", "⣖", "⣗", "⢘", "⢙", "⢚", "⢛", "⢜", "⢝", "⢞", "⢟", "⣘", "⣙", "⣚", "⣛", "⣜", "⣝", "⣞", "⣟", "⢠", "⢡", "⢢", "⢣", "⢤", "⢥", "⢦", "⢧", "⣠", "⣡", "⣢", "⣣", "⣤", "⣥", "⣦", "⣧", "⢨", "⢩", "⢪", "⢫", "⢬", "⢭", "⢮", "⢯", "⣨", "⣩", "⣪", "⣫", "⣬", "⣭", "⣮", "⣯", "⢰", "⢱", "⢲", "⢳", "⢴", "⢵", "⢶", "⢷", "⣰", "⣱", "⣲", "⣳", "⣴", "⣵", "⣶", "⣷", "⢸", "⢹", "⢺", "⢻", "⢼", "⢽", "⢾", "⢿", "⣸", "⣹", "⣺", "⣻", "⣼", "⣽", "⣾", "⣿"]
-  },
-  "line": {
-    "interval": 130,
-    "frames": ["-", "\\", "|", "/"]
-  },
-  "line2": {
-    "interval": 100,
-    "frames": ["⠂", "-", "–", "—", "–", "-"]
-  },
-  "pipe": {
-    "interval": 100,
-    "frames": ["┤", "┘", "┴", "└", "├", "┌", "┬", "┐"]
-  },
-  "simpleDots": {
-    "interval": 400,
-    "frames": [".  ", ".. ", "...", "   "]
-  },
-  "simpleDotsScrolling": {
-    "interval": 200,
-    "frames": [".  ", ".. ", "...", " ..", "  .", "   "]
-  },
-  "star": {
-    "interval": 70,
-    "frames": ["✶", "✸", "✹", "✺", "✹", "✷"]
-  },
-  "star2": {
-    "interval": 80,
-    "frames": ["+", "x", "*"]
-  },
-  "flip": {
-    "interval": 70,
-    "frames": ["_", "_", "_", "-", "`", "`", "'", "´", "-", "_", "_", "_"]
-  },
-  "hamburger": {
-    "interval": 100,
-    "frames": ["☱", "☲", "☴"]
-  },
-  "growVertical": {
-    "interval": 120,
-    "frames": ["▁", "▃", "▄", "▅", "▆", "▇", "▆", "▅", "▄", "▃"]
-  },
-  "growHorizontal": {
-    "interval": 120,
-    "frames": ["▏", "▎", "▍", "▌", "▋", "▊", "▉", "▊", "▋", "▌", "▍", "▎"]
-  },
-  "balloon": {
-    "interval": 140,
-    "frames": [" ", ".", "o", "O", "@", "*", " "]
-  },
-  "balloon2": {
-    "interval": 120,
-    "frames": [".", "o", "O", "°", "O", "o", "."]
-  },
-  "noise": {
-    "interval": 100,
-    "frames": ["▓", "▒", "░"]
-  },
-  "bounce": {
-    "interval": 120,
-    "frames": ["⠁", "⠂", "⠄", "⠂"]
-  },
-  "boxBounce": {
-    "interval": 120,
-    "frames": ["▖", "▘", "▝", "▗"]
-  },
-  "boxBounce2": {
-    "interval": 100,
-    "frames": ["▌", "▀", "▐", "▄"]
-  },
-  "triangle": {
-    "interval": 50,
-    "frames": ["◢", "◣", "◤", "◥"]
-  },
-  "arc": {
-    "interval": 100,
-    "frames": ["◜", "◠", "◝", "◞", "◡", "◟"]
-  },
-  "circle": {
-    "interval": 120,
-    "frames": ["◡", "⊙", "◠"]
-  },
-  "squareCorners": {
-    "interval": 180,
-    "frames": ["◰", "◳", "◲", "◱"]
-  },
-  "circleQuarters": {
-    "interval": 120,
-    "frames": ["◴", "◷", "◶", "◵"]
-  },
-  "circleHalves": {
-    "interval": 50,
-    "frames": ["◐", "◓", "◑", "◒"]
-  },
-  "squish": {
-    "interval": 100,
-    "frames": ["╫", "╪"]
-  },
-  "toggle": {
-    "interval": 250,
-    "frames": ["⊶", "⊷"]
-  },
-  "toggle2": {
-    "interval": 80,
-    "frames": ["▫", "▪"]
-  },
-  "toggle3": {
-    "interval": 120,
-    "frames": ["□", "■"]
-  },
-  "toggle4": {
-    "interval": 100,
-    "frames": ["■", "□", "▪", "▫"]
-  },
-  "toggle5": {
-    "interval": 100,
-    "frames": ["▮", "▯"]
-  },
-  "toggle6": {
-    "interval": 300,
-    "frames": ["ဝ", "၀"]
-  },
-  "toggle7": {
-    "interval": 80,
-    "frames": ["⦾", "⦿"]
-  },
-  "toggle8": {
-    "interval": 100,
-    "frames": ["◍", "◌"]
-  },
-  "toggle9": {
-    "interval": 100,
-    "frames": ["◉", "◎"]
-  },
-  "toggle10": {
-    "interval": 100,
-    "frames": ["㊂", "㊀", "㊁"]
-  },
-  "toggle11": {
-    "interval": 50,
-    "frames": ["⧇", "⧆"]
-  },
-  "toggle12": {
-    "interval": 120,
-    "frames": ["☗", "☖"]
-  },
-  "toggle13": {
-    "interval": 80,
-    "frames": ["=", "*", "-"]
-  },
-  "arrow": {
-    "interval": 100,
-    "frames": ["←", "↖", "↑", "↗", "→", "↘", "↓", "↙"]
-  },
-  "arrow2": {
-    "interval": 80,
-    "frames": ["⬆️ ", "↗️ ", "➡️ ", "↘️ ", "⬇️ ", "↙️ ", "⬅️ ", "↖️ "]
-  },
-  "arrow3": {
-    "interval": 120,
-    "frames": ["▹▹▹▹▹", "▸▹▹▹▹", "▹▸▹▹▹", "▹▹▸▹▹", "▹▹▹▸▹", "▹▹▹▹▸"]
-  },
-  "bouncingBar": {
-    "interval": 80,
-    "frames": ["[    ]", "[=   ]", "[==  ]", "[=== ]", "[ ===]", "[  ==]", "[   =]", "[    ]", "[   =]", "[  ==]", "[ ===]", "[====]", "[=== ]", "[==  ]", "[=   ]"]
-  },
-  "bouncingBall": {
-    "interval": 80,
-    "frames": ["( ●    )", "(  ●   )", "(   ●  )", "(    ● )", "(     ●)", "(    ● )", "(   ●  )", "(  ●   )", "( ●    )", "(●     )"]
-  },
-  "smiley": {
-    "interval": 200,
-    "frames": ["😄 ", "😝 "]
-  },
-  "monkey": {
-    "interval": 300,
-    "frames": ["🙈 ", "🙈 ", "🙉 ", "🙊 "]
-  },
-  "hearts": {
-    "interval": 100,
-    "frames": ["💛 ", "💙 ", "💜 ", "💚 ", "❤️ "]
-  },
-  "clock": {
-    "interval": 100,
-    "frames": ["🕛 ", "🕐 ", "🕑 ", "🕒 ", "🕓 ", "🕔 ", "🕕 ", "🕖 ", "🕗 ", "🕘 ", "🕙 ", "🕚 "]
-  },
-  "earth": {
-    "interval": 180,
-    "frames": ["🌍 ", "🌎 ", "🌏 "]
-  },
-  "material": {
-    "interval": 17,
-    "frames": ["█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁", "██▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁", "███▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁", "████▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁", "██████▁▁▁▁▁▁▁▁▁▁▁▁▁▁", "██████▁▁▁▁▁▁▁▁▁▁▁▁▁▁", "███████▁▁▁▁▁▁▁▁▁▁▁▁▁", "████████▁▁▁▁▁▁▁▁▁▁▁▁", "█████████▁▁▁▁▁▁▁▁▁▁▁", "█████████▁▁▁▁▁▁▁▁▁▁▁", "██████████▁▁▁▁▁▁▁▁▁▁", "███████████▁▁▁▁▁▁▁▁▁", "█████████████▁▁▁▁▁▁▁", "██████████████▁▁▁▁▁▁", "██████████████▁▁▁▁▁▁", "▁██████████████▁▁▁▁▁", "▁██████████████▁▁▁▁▁", "▁██████████████▁▁▁▁▁", "▁▁██████████████▁▁▁▁", "▁▁▁██████████████▁▁▁", "▁▁▁▁█████████████▁▁▁", "▁▁▁▁██████████████▁▁", "▁▁▁▁██████████████▁▁", "▁▁▁▁▁██████████████▁", "▁▁▁▁▁██████████████▁", "▁▁▁▁▁██████████████▁", "▁▁▁▁▁▁██████████████", "▁▁▁▁▁▁██████████████", "▁▁▁▁▁▁▁█████████████", "▁▁▁▁▁▁▁█████████████", "▁▁▁▁▁▁▁▁████████████", "▁▁▁▁▁▁▁▁████████████", "▁▁▁▁▁▁▁▁▁███████████", "▁▁▁▁▁▁▁▁▁███████████", "▁▁▁▁▁▁▁▁▁▁██████████", "▁▁▁▁▁▁▁▁▁▁██████████", "▁▁▁▁▁▁▁▁▁▁▁▁████████", "▁▁▁▁▁▁▁▁▁▁▁▁▁███████", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁██████", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█████", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█████", "█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁████", "██▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁███", "██▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁███", "███▁▁▁▁▁▁▁▁▁▁▁▁▁▁███", "████▁▁▁▁▁▁▁▁▁▁▁▁▁▁██", "█████▁▁▁▁▁▁▁▁▁▁▁▁▁▁█", "█████▁▁▁▁▁▁▁▁▁▁▁▁▁▁█", "██████▁▁▁▁▁▁▁▁▁▁▁▁▁█", "████████▁▁▁▁▁▁▁▁▁▁▁▁", "█████████▁▁▁▁▁▁▁▁▁▁▁", "█████████▁▁▁▁▁▁▁▁▁▁▁", "█████████▁▁▁▁▁▁▁▁▁▁▁", "█████████▁▁▁▁▁▁▁▁▁▁▁", "███████████▁▁▁▁▁▁▁▁▁", "████████████▁▁▁▁▁▁▁▁", "████████████▁▁▁▁▁▁▁▁", "██████████████▁▁▁▁▁▁", "██████████████▁▁▁▁▁▁", "▁██████████████▁▁▁▁▁", "▁██████████████▁▁▁▁▁", "▁▁▁█████████████▁▁▁▁", "▁▁▁▁▁████████████▁▁▁", "▁▁▁▁▁████████████▁▁▁", "▁▁▁▁▁▁███████████▁▁▁", "▁▁▁▁▁▁▁▁█████████▁▁▁", "▁▁▁▁▁▁▁▁█████████▁▁▁", "▁▁▁▁▁▁▁▁▁█████████▁▁", "▁▁▁▁▁▁▁▁▁█████████▁▁", "▁▁▁▁▁▁▁▁▁▁█████████▁", "▁▁▁▁▁▁▁▁▁▁▁████████▁", "▁▁▁▁▁▁▁▁▁▁▁████████▁", "▁▁▁▁▁▁▁▁▁▁▁▁███████▁", "▁▁▁▁▁▁▁▁▁▁▁▁███████▁", "▁▁▁▁▁▁▁▁▁▁▁▁▁███████", "▁▁▁▁▁▁▁▁▁▁▁▁▁███████", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█████", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁████", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁████", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁████", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁███", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁███", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁██", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁██", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁██", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"]
-  },
-  "moon": {
-    "interval": 80,
-    "frames": ["🌑 ", "🌒 ", "🌓 ", "🌔 ", "🌕 ", "🌖 ", "🌗 ", "🌘 "]
-  },
-  "runner": {
-    "interval": 140,
-    "frames": ["🚶 ", "🏃 "]
-  },
-  "pong": {
-    "interval": 80,
-    "frames": ["▐⠂       ▌", "▐⠈       ▌", "▐ ⠂      ▌", "▐ ⠠      ▌", "▐  ⡀     ▌", "▐  ⠠     ▌", "▐   ⠂    ▌", "▐   ⠈    ▌", "▐    ⠂   ▌", "▐    ⠠   ▌", "▐     ⡀  ▌", "▐     ⠠  ▌", "▐      ⠂ ▌", "▐      ⠈ ▌", "▐       ⠂▌", "▐       ⠠▌", "▐       ⡀▌", "▐      ⠠ ▌", "▐      ⠂ ▌", "▐     ⠈  ▌", "▐     ⠂  ▌", "▐    ⠠   ▌", "▐    ⡀   ▌", "▐   ⠠    ▌", "▐   ⠂    ▌", "▐  ⠈     ▌", "▐  ⠂     ▌", "▐ ⠠      ▌", "▐ ⡀      ▌", "▐⠠       ▌"]
-  },
-  "shark": {
-    "interval": 120,
-    "frames": ["▐|\\____________▌", "▐_|\\___________▌", "▐__|\\__________▌", "▐___|\\_________▌", "▐____|\\________▌", "▐_____|\\_______▌", "▐______|\\______▌", "▐_______|\\_____▌", "▐________|\\____▌", "▐_________|\\___▌", "▐__________|\\__▌", "▐___________|\\_▌", "▐____________|\\▌", "▐____________/|▌", "▐___________/|_▌", "▐__________/|__▌", "▐_________/|___▌", "▐________/|____▌", "▐_______/|_____▌", "▐______/|______▌", "▐_____/|_______▌", "▐____/|________▌", "▐___/|_________▌", "▐__/|__________▌", "▐_/|___________▌", "▐/|____________▌"]
-  },
-  "dqpb": {
-    "interval": 100,
-    "frames": ["d", "q", "p", "b"]
-  },
-  "weather": {
-    "interval": 100,
-    "frames": ["☀️ ", "☀️ ", "☀️ ", "🌤 ", "⛅️ ", "🌥 ", "☁️ ", "🌧 ", "🌨 ", "🌧 ", "🌨 ", "🌧 ", "🌨 ", "⛈ ", "🌨 ", "🌧 ", "🌨 ", "☁️ ", "🌥 ", "⛅️ ", "🌤 ", "☀️ ", "☀️ "]
-  },
-  "christmas": {
-    "interval": 400,
-    "frames": ["🌲", "🎄"]
-  },
-  "grenade": {
-    "interval": 80,
-    "frames": ["،  ", "′  ", " ´ ", " ‾ ", "  ⸌", "  ⸊", "  |", "  ⁎", "  ⁕", " ෴ ", "  ⁓", "   ", "   ", "   "]
-  },
-  "point": {
-    "interval": 125,
-    "frames": ["∙∙∙", "●∙∙", "∙●∙", "∙∙●", "∙∙∙"]
-  },
-  "layer": {
-    "interval": 150,
-    "frames": ["-", "=", "≡"]
-  },
-  "betaWave": {
-    "interval": 80,
-    "frames": ["ρββββββ", "βρβββββ", "ββρββββ", "βββρβββ", "ββββρββ", "βββββρβ", "ββββββρ"]
-  },
-  "fingerDance": {
-    "interval": 160,
-    "frames": ["🤘 ", "🤟 ", "🖖 ", "✋ ", "🤚 ", "👆 "]
-  },
-  "fistBump": {
-    "interval": 80,
-    "frames": ["\uD83E\uDD1C\u3000\u3000\u3000\u3000\uD83E\uDD1B ", "\uD83E\uDD1C\u3000\u3000\u3000\u3000\uD83E\uDD1B ", "\uD83E\uDD1C\u3000\u3000\u3000\u3000\uD83E\uDD1B ", "\u3000\uD83E\uDD1C\u3000\u3000\uD83E\uDD1B\u3000 ", "\u3000\u3000\uD83E\uDD1C\uD83E\uDD1B\u3000\u3000 ", "\u3000\uD83E\uDD1C\u2728\uD83E\uDD1B\u3000\u3000 ", "\uD83E\uDD1C\u3000\u2728\u3000\uD83E\uDD1B\u3000 "]
-  },
-  "soccerHeader": {
-    "interval": 80,
-    "frames": [" 🧑⚽️       🧑 ", "🧑  ⚽️      🧑 ", "🧑   ⚽️     🧑 ", "🧑    ⚽️    🧑 ", "🧑     ⚽️   🧑 ", "🧑      ⚽️  🧑 ", "🧑       ⚽️🧑  ", "🧑      ⚽️  🧑 ", "🧑     ⚽️   🧑 ", "🧑    ⚽️    🧑 ", "🧑   ⚽️     🧑 ", "🧑  ⚽️      🧑 "]
-  },
-  "mindblown": {
-    "interval": 160,
-    "frames": ["😐 ", "😐 ", "😮 ", "😮 ", "😦 ", "😦 ", "😧 ", "😧 ", "🤯 ", "💥 ", "✨ ", "\u3000 ", "\u3000 ", "\u3000 "]
-  },
-  "speaker": {
-    "interval": 160,
-    "frames": ["🔈 ", "🔉 ", "🔊 ", "🔉 "]
-  },
-  "orangePulse": {
-    "interval": 100,
-    "frames": ["🔸 ", "🔶 ", "🟠 ", "🟠 ", "🔶 "]
-  },
-  "bluePulse": {
-    "interval": 100,
-    "frames": ["🔹 ", "🔷 ", "🔵 ", "🔵 ", "🔷 "]
-  },
-  "orangeBluePulse": {
-    "interval": 100,
-    "frames": ["🔸 ", "🔶 ", "🟠 ", "🟠 ", "🔶 ", "🔹 ", "🔷 ", "🔵 ", "🔵 ", "🔷 "]
-  },
-  "timeTravel": {
-    "interval": 100,
-    "frames": ["🕛 ", "🕚 ", "🕙 ", "🕘 ", "🕗 ", "🕖 ", "🕕 ", "🕔 ", "🕓 ", "🕒 ", "🕑 ", "🕐 "]
-  },
-  "aesthetic": {
-    "interval": 80,
-    "frames": ["▰▱▱▱▱▱▱", "▰▰▱▱▱▱▱", "▰▰▰▱▱▱▱", "▰▰▰▰▱▱▱", "▰▰▰▰▰▱▱", "▰▰▰▰▰▰▱", "▰▰▰▰▰▰▰", "▰▱▱▱▱▱▱"]
-  }
-};
-},{}],"node_modules/cli-spinners/index.js":[function(require,module,exports) {
-'use strict';
-
-var spinners = Object.assign({}, require('./spinners.json')); // eslint-disable-line import/extensions
-
-var spinnersList = Object.keys(spinners);
-Object.defineProperty(spinners, 'random', {
-  get: function () {
-    var randomIndex = Math.floor(Math.random() * spinnersList.length);
-    var spinnerName = spinnersList[randomIndex];
-    return spinners[spinnerName];
-  }
-});
-module.exports = spinners;
-},{"./spinners.json":"node_modules/cli-spinners/spinners.json"}],"node_modules/xmlchars/xml/1.0/ed5.js":[function(require,module,exports) {
-"use strict";
-/**
- * Character classes and associated utilities for the 5th edition of XML 1.0.
- *
- * @author Louis-Dominique Dubeau
- * @license MIT
- * @copyright Louis-Dominique Dubeau
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-//
-// Fragments.
-//
-exports.CHAR = "\t\n\r -\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF";
-exports.S = " \t\r\n";
-// tslint:disable-next-line:max-line-length
-exports.NAME_START_CHAR = ":A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\uD800\uDC00-\uDB7F\uDFFF";
-exports.NAME_CHAR = "-" + exports.NAME_START_CHAR + ".0-9\u00B7\u0300-\u036F\u203F-\u2040";
-//
-// Regular expressions.
-//
-exports.CHAR_RE = new RegExp("^[" + exports.CHAR + "]$", "u");
-exports.S_RE = new RegExp("^[" + exports.S + "]+$", "u");
-exports.NAME_START_CHAR_RE = new RegExp("^[" + exports.NAME_START_CHAR + "]$", "u");
-exports.NAME_CHAR_RE = new RegExp("^[" + exports.NAME_CHAR + "]$", "u");
-exports.NAME_RE = new RegExp("^[" + exports.NAME_START_CHAR + "][" + exports.NAME_CHAR + "]*$", "u");
-exports.NMTOKEN_RE = new RegExp("^[" + exports.NAME_CHAR + "]+$", "u");
-var TAB = 9;
-var NL = 0xA;
-var CR = 0xD;
-var SPACE = 0x20;
-//
-// Lists.
-//
-/** All characters in the ``S`` production. */
-exports.S_LIST = [SPACE, NL, CR, TAB];
-/**
- * Determines whether a codepoint matches the ``CHAR`` production.
- *
- * @param c The code point.
- *
- * @returns ``true`` if the codepoint matches ``CHAR``.
- */
-function isChar(c) {
-    return (c >= SPACE && c <= 0xD7FF) ||
-        c === NL || c === CR || c === TAB ||
-        (c >= 0xE000 && c <= 0xFFFD) ||
-        (c >= 0x10000 && c <= 0x10FFFF);
-}
-exports.isChar = isChar;
-/**
- * Determines whether a codepoint matches the ``S`` (space) production.
- *
- * @param c The code point.
- *
- * @returns ``true`` if the codepoint matches ``S``.
- */
-function isS(c) {
-    return c === SPACE || c === NL || c === CR || c === TAB;
-}
-exports.isS = isS;
-/**
- * Determines whether a codepoint matches the ``NAME_START_CHAR`` production.
- *
- * @param c The code point.
- *
- * @returns ``true`` if the codepoint matches ``NAME_START_CHAR``.
- */
-function isNameStartChar(c) {
-    return ((c >= 0x41 && c <= 0x5A) ||
-        (c >= 0x61 && c <= 0x7A) ||
-        c === 0x3A ||
-        c === 0x5F ||
-        c === 0x200C ||
-        c === 0x200D ||
-        (c >= 0xC0 && c <= 0xD6) ||
-        (c >= 0xD8 && c <= 0xF6) ||
-        (c >= 0x00F8 && c <= 0x02FF) ||
-        (c >= 0x0370 && c <= 0x037D) ||
-        (c >= 0x037F && c <= 0x1FFF) ||
-        (c >= 0x2070 && c <= 0x218F) ||
-        (c >= 0x2C00 && c <= 0x2FEF) ||
-        (c >= 0x3001 && c <= 0xD7FF) ||
-        (c >= 0xF900 && c <= 0xFDCF) ||
-        (c >= 0xFDF0 && c <= 0xFFFD) ||
-        (c >= 0x10000 && c <= 0xEFFFF));
-}
-exports.isNameStartChar = isNameStartChar;
-/**
- * Determines whether a codepoint matches the ``NAME_CHAR`` production.
- *
- * @param c The code point.
- *
- * @returns ``true`` if the codepoint matches ``NAME_CHAR``.
- */
-function isNameChar(c) {
-    return isNameStartChar(c) ||
-        (c >= 0x30 && c <= 0x39) ||
-        c === 0x2D ||
-        c === 0x2E ||
-        c === 0xB7 ||
-        (c >= 0x0300 && c <= 0x036F) ||
-        (c >= 0x203F && c <= 0x2040);
-}
-exports.isNameChar = isNameChar;
-
-},{}],"model.js":[function(require,module,exports) {
+},{"./view.js":"views/view.js"}],"model.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16063,11 +15610,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.stickyNavbar = exports.state = exports.setState = exports.sectionFadeIn = void 0;
 
-var _cliSpinners = require("cli-spinners");
-
 require("regenerator-runtime/runtime");
-
-var _ed = require("xmlchars/xml/1.0/ed5");
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
@@ -16154,31 +15697,31 @@ var setState = /*#__PURE__*/function () {
               var weekday = date.getDate();
 
               switch (weekday) {
-                case 6:
+                case 5:
                   day.weekday = "Sunday";
                   break;
 
-                case 0:
+                case 6:
                   day.weekday = "Monday";
                   break;
 
-                case 1:
+                case 0:
                   day.weekday = "Tuesday";
                   break;
 
-                case 2:
+                case 1:
                   day.weekday = "Wednesday";
                   break;
 
-                case 3:
+                case 2:
                   day.weekday = "Thursday";
                   break;
 
-                case 4:
+                case 3:
                   day.weekday = "Friday";
                   break;
 
-                case 5:
+                case 4:
                   day.weekday = "Saturday";
                   break;
               }
@@ -16206,7 +15749,7 @@ var setState = /*#__PURE__*/function () {
 }();
 
 exports.setState = setState;
-},{"cli-spinners":"node_modules/cli-spinners/index.js","regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","xmlchars/xml/1.0/ed5":"node_modules/xmlchars/xml/1.0/ed5.js"}],"controller.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js"}],"controller.js":[function(require,module,exports) {
 "use strict";
 
 require("core-js/stable");
@@ -16220,8 +15763,6 @@ var _navbarView = _interopRequireDefault(require("./views/navbarView"));
 var _weatherBarView = _interopRequireDefault(require("./views/weatherBarView"));
 
 var model = _interopRequireWildcard(require("./model.js"));
-
-var _view = _interopRequireDefault(require("./views/view.js"));
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -16288,7 +15829,7 @@ var init = function init() {
 };
 
 init();
-},{"core-js/stable":"node_modules/core-js/stable/index.js","regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","./views/serviceSectionView":"views/serviceSectionView.js","./views/navbarView":"views/navbarView.js","./views/weatherBarView":"views/weatherBarView.js","./model.js":"model.js","./views/view.js":"views/view.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"core-js/stable":"node_modules/core-js/stable/index.js","regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","./views/serviceSectionView":"views/serviceSectionView.js","./views/navbarView":"views/navbarView.js","./views/weatherBarView":"views/weatherBarView.js","./model.js":"model.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -16316,7 +15857,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37533" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42569" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

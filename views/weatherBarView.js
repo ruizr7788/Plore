@@ -1,4 +1,3 @@
-import { mark } from "regenerator-runtime";
 import View from "./view.js";
 
 class WeatherView extends View {

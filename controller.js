@@ -1,10 +1,10 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+
 import serviceSectionView from "./views/serviceSectionView";
 import navbarView from "./views/navbarView";
 import weatherBarView from "./views/weatherBarView";
 import * as model from "./model.js";
-import View from "./views/view.js";
 
 const sectionController = function (entry, observer) {
   // once section container is 10% in view render section
